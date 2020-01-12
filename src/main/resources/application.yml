@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    jdbc-url: jdbc:mysql://localhost:3306/local_test_db?serverTimezone=UTC&useSSL=false
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: default
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+    open-in-view: false
+
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL: DEBUG
+#        type: TRACE
