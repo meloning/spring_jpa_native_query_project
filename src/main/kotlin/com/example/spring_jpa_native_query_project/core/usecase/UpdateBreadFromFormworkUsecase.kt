@@ -24,8 +24,8 @@ class UpdateBreadFromFormworkUsecase(
                 title = "updated title2",
                 description = "updated description2",
                 formworkType = FormworkType.BULLET,
-                polygonIds = listOf(1L, 2L, 3L, 4L, 5L),
-                properties = setOf("ice", "gas")
+                polygonIds = listOf(1L, 2L),
+                properties = setOf("fire")
         )
         val updateFormwork = this.formworkRepository.save(temp)
 //        val breads = this.breadRepository.findByFormworkId(updateFormwork.id ?: 0).map { it.id ?: 0 }

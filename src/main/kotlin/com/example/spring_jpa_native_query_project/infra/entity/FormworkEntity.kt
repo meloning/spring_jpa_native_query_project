@@ -4,6 +4,7 @@ package com.example.spring_jpa_native_query_project.infra.entity
 import com.example.spring_jpa_native_query_project.core.model.Formwork
 import com.example.spring_jpa_native_query_project.core.model.FormworkType
 import com.example.spring_jpa_native_query_project.infra.converter.FormworkConverter
+import org.hibernate.annotations.DynamicUpdate
 import org.hibernate.annotations.IndexColumn
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate
@@ -15,6 +16,7 @@ import javax.validation.constraints.NotNull
 
 @Entity
 @EntityListeners(AuditingEntityListener::class)
+@DynamicUpdate
 class FormworkEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
